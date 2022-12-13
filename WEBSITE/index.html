@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+         <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Rose Ghazarian</title>
+
+
+   <!-- CSS stylesheet -->
+   <link rel="stylesheet" href="stylesheet.css">
+
+
+
+   <!-- google font used -->
+ <link href="https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap" rel="stylesheet">
+
+
+
+
+               <!-- jquery + tweenmax code (site animation) -->
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+            </head>
+
+            <!--Linked Text Style-->
+            <style>
+            a:link, a:visited {
+              color: white;
+              text-align: center;
+              display: inline-block;
+            }
+
+            a:hover, a:active {
+              background-color: darkred;
+            }
+            </style>
+
+
+
+            <!--Main Site Structure-->
+            <body>
+               <div class="wrapper">
+                  <div class="menu-btn">Info</div>
+                  <div class="menu-container">
+                     <div class="items-section">
+                        <ul>
+                           <li><a href="#">About</a></li>
+                           <li><a href="#">Portfolio</a></li>
+                           <li><a href="#">Resume</a></li>
+                        </ul>
+                     </div>
+
+
+
+                     <!--Listed Projects by Year-->
+                        <div class="project-section">
+                           <ul>
+                              <h1>Projects</h1>
+                              <li>➤ <span>2022</span></li>
+                              <li>➤ <span>2021</span></li>
+                              <li>➤ <span>2020</span></li>
+                           </ul>
+                        </div>
+
+
+                              <!--Email Section-->
+                                 <div class="mail-section">
+                                    <div class="txt">
+                                       <a href="mailto:isabella.ghazarian@gmail.com"><P>Contact</P></a>
+                                    </div>
+                                 </div>
+
+                        <!--Social Media Link:Instagram-->
+                           <div class="socials">
+                              <div class="txt">
+                                <a href="https://www.instagram.com/scrxxn_/"> <p><span>Instagram</span></p>
+                              </div>
+                              </div>
+                           </div>
+                        </div>
+   <script>
+      var t1 = new TimelineMax({paused: true});
+      t1.from(".menu-container", 1, {
+         left: "-25%",
+         ease: Power3.easeInOut
+      });
+
+      t1.reverse();
+         $(document).on("click", ".menu-btn", function() {
+         t1.reversed(!t1.reversed());
+      });
+   </script>
+
+
+</body>
+</html>
+
